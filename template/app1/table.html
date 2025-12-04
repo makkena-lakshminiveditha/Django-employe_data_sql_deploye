@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table border="2">
+            <tr>
+                <th>Employe Name</th>
+                <th>Employe Age</th>
+                <th>Employe Salary</th>
+            </tr>
+            {% for x in data %}
+            <tr>
+                <td>{{x.name}}</td>
+                <td>{{x.age}}</td>
+                <td>{{x.salary}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{% url 'myform' %}"><button>Add Employe</button></a>
+    </div>
+</body>
+</html>
